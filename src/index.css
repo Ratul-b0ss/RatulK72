@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: font-1;
+  src: url(/src/Fonts/Lausanne-300.woff2);
+}
+
+@font-face {
+  font-family: font-2;
+  src: url(/src/Fonts/Lausanne-500.woff2)
+}
+
+html, body {
+  background-color: black; /* Or whatever your actual main website background color is */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Force the browser to keep the body on the GPU to prevent layout redrawing flashes */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.menunav {
+  animation: rolling 10s linear infinite;
+}
+
+@keyframes rolling {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+
+    transform: translateX(-50%);
+  }
+}
